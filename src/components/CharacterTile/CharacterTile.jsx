@@ -4,7 +4,8 @@ import "./CharacterTile.scss";
 import blackCross from "../../assets/images/black-cross.png";
 
 const CharacterTile = (props) => {
-  const { characterName, house, ancestry, patronus, actor, wand } = props;
+  const { characterName, house, ancestry, patronus, actor, wand, species } =
+    props;
   const [showText, setShowText] = useState(false);
   const handleClick = () => {
     setShowText(!showText);
@@ -27,6 +28,9 @@ const CharacterTile = (props) => {
         onClick={handleClick}
       />
       <h2 className="character-tile__name">{characterName}</h2>
+      {species ? (
+        <p className="character-tile__content">Species: {species}</p>
+      ) : null}
       {ancestry ? (
         <p className="character-tile__content">Ancestry: {ancestry}</p>
       ) : null}
@@ -36,10 +40,10 @@ const CharacterTile = (props) => {
       {actor ? (
         <p className="character-tile__content">Played by: {actor}</p>
       ) : null}
-      {wand.wood ? (
+      {wand.core ? (
         <div className="character-tile__content">
           <p>Wand:</p>
-          <ul>
+          <ul className="character-tile__content">
             <li>{wand.wood}</li>
             <li>{wand.core}</li>
           </ul>

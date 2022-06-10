@@ -2,18 +2,20 @@
 
 .character-card {
   border-radius: 15px;
-
+  font-family: $font-secondary;
+  border: 1px solid $color-tertiary;
   box-shadow: 0px 10px 20px rgba($color-black, 0.25);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid $color-primary;
-    width: 200px;
-    height: 650px;
-    gap: 1em;
-    &__img {
-        width: 150px;
-        height: auto;
-    }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid $color-primary;
+  width: 250px;
+  height: 650px;
+  gap: 1em;
+  &__img {
+    width: 150px;
+    height: auto;
+  }
 }

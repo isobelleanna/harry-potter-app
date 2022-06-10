@@ -10,7 +10,7 @@ function App() {
   const [searchTerm, setSearchTerm] = useState("");
   const filteredArr = characters
     .filter((character) => character.image)
-    .slice(0, 5);
+    .slice(0, 3);
 
   const handleInput = (event) => {
     const input = event.target.value.toLowerCase();
@@ -25,7 +25,7 @@ function App() {
     <div className="App">
       <Nav />
       <section className="character-gallery">
-        <h2>Main Characters</h2>
+        <h2 className="character-gallery__heading">Main Characters</h2>
         <CharacterCards filteredArr={filteredArr} />
       </section>
       <SearchBox handleInput={handleInput} searchTerm={searchTerm} />
@@ -39,6 +39,7 @@ function App() {
             patronus={character.patronus}
             actor={character.actor}
             wand={character.wand}
+            species={character.species}
           />
         ))}
       </div>

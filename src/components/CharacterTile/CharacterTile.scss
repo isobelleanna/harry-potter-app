@@ -1,19 +1,27 @@
 @use "../../assets/sass/_variables.scss" as *;
 
 .character-tile {
+    font-family: $font-secondary;
+    margin: 1em;
     position: relative;
+    background-color: $color-main;
     border: 1px solid $color-primary;
     display: flex;
-    align-items: center;
+    align-items:center;
     flex-direction: column;
-    justify-content: center;
+    justify-content:center;
     width: 250px;
-    height: 300px;
+    height: 350px;
+    text-align: center;
     &__cross {
         height: 25px;
     width: 25px;
     position: absolute;
     right: 20px;
     top: 15px;
+    }&__content {
+        color: $color-button-text;
+        text-align: left;
+        margin: 5px;
     }
 }

@@ -6,7 +6,9 @@
   margin: 2em;
 
   &__label {
-    font-size: 20px;
+    color: $color-headline;
+    font-size: 2em;
+    font-family: $font-primary;
   }
 
   &__input {

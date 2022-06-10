@@ -4,12 +4,23 @@ import CharacterTile from "./components/CharacterTile/CharacterTile";
 import characters from "./data/characters";
 import Nav from "./components/Nav/Nav";
 import SearchBox from "./components/SearchBox/SearchBox";
+import { useState } from "react";
 
 function App() {
+  const [searchTerm, setSearchTerm] = useState("");
   const filteredArr = characters
     .filter((character) => character.image)
     .slice(0, 5);
-  console.log(filteredArr);
+
+  const handleInput = (event) => {
+    const input = event.target.value.toLowerCase();
+    setSearchTerm(input);
+  };
+  const filteredBySearch = characters.filter((character) => {
+    const nameLower = character.name.toLowerCase();
+    const houseLower = character.house.toLowerCase();
+    return nameLower.includes(searchTerm) || houseLower.includes(searchTerm);
+  });
   return (
     <div className="App">
       <Nav />
@@ -17,9 +28,9 @@ function App() {
         <h2>Main Characters</h2>
         <CharacterCards filteredArr={filteredArr} />
       </section>
-      <SearchBox />
+      <SearchBox handleInput={handleInput} searchTerm={searchTerm} />
       <div className="character-tiles">
-        {characters.map((character, index) => (
+        {filteredBySearch.map((character, index) => (
           <CharacterTile
             key={index}
             characterName={character.name}

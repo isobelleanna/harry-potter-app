@@ -1,7 +1,7 @@
 import React from "react";
 import "./Dashboard.scss";
 
-const Dashboard = () => {
+const Dashboard = (props) => {
   return <div>Dashboard</div>;
 };
 

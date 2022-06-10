@@ -7,16 +7,6 @@ body {
     background-color: $color-background;
 }
 
-.character-gallery {
-   background-color: $color-tertiary;
-   border-radius: 10px;
-   padding: 10px 50px 20px 50px;
-   &__heading {
-       font-family: $font-primary;
-   }
-}
-
-
 @media screen and (min-width: 992px) {
   .app {
     max-width: 1200px;
@@ -24,9 +14,3 @@ body {
   }
 }
 
-@media screen and (min-width:680px) {
-  .character-gallery  {
-    max-width: 880px;
-    margin: 0 auto;
-  }
-}

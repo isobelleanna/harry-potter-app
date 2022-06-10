@@ -38,6 +38,7 @@ function App() {
             ancestry={character.ancestry}
             patronus={character.patronus}
             actor={character.actor}
+            wand={character.wand}
           />
         ))}
       </div>

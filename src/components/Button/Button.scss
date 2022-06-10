@@ -1,10 +1,11 @@
-@use "../../assets/sass/_variables.scss" as *;
+@use "../../assets/sass/_variables.scss"as *;
 
 .button {
-    min-width: 80px;
+  min-width: 80px;
   padding: 10px 20px;
   border-radius: 15px;
-  border: none; 
+  border: none;
   background-color: $color-button;
   color: $color-button-text;
+  font-family: $font-secondary;
 }

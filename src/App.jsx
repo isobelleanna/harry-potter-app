@@ -1,9 +1,8 @@
 import "./App.scss";
 import CharacterCards from "./components/CharacterCards/CharacterCards";
-import CharacterTile from "./components/CharacterTile/CharacterTile";
 import characters from "./data/characters";
 import Nav from "./components/Nav/Nav";
-import SearchBox from "./components/SearchBox/SearchBox";
+import ExploreCharacters from "./containers/ExploreCharacters/ExploreCharacters";
 import { useState } from "react";
 
 function App() {
@@ -28,21 +27,13 @@ function App() {
         <h2 className="character-gallery__heading">Main Characters</h2>
         <CharacterCards filteredArr={filteredArr} />
       </section>
-      <SearchBox handleInput={handleInput} searchTerm={searchTerm} />
-      <div className="character-tiles">
-        {filteredBySearch.map((character, index) => (
-          <CharacterTile
-            key={index}
-            characterName={character.name}
-            house={character.house}
-            ancestry={character.ancestry}
-            patronus={character.patronus}
-            actor={character.actor}
-            wand={character.wand}
-            species={character.species}
-          />
-        ))}
-      </div>
+      <section>
+        <ExploreCharacters
+          handleInput={handleInput}
+          searchTerm={searchTerm}
+          filteredBySearch={filteredBySearch}
+        />
+      </section>
     </div>
   );
 }

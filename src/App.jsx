@@ -2,6 +2,7 @@ import "./App.scss";
 import CharacterCards from "./components/CharacterCards/CharacterCards";
 import characters from "./data/characters";
 import Nav from "./components/Nav/Nav";
+import Home from "./containers/Home/Home";
 import ExploreCharacters from "./containers/ExploreCharacters/ExploreCharacters";
 import { useState } from "react";
 
@@ -23,17 +24,12 @@ function App() {
   return (
     <div className="App">
       <Nav />
-      <section className="character-gallery">
-        <h2 className="character-gallery__heading">Main Characters</h2>
-        <CharacterCards filteredArr={filteredArr} />
-      </section>
-      <section>
-        <ExploreCharacters
-          handleInput={handleInput}
-          searchTerm={searchTerm}
-          filteredBySearch={filteredBySearch}
-        />
-      </section>
+      <Home
+        filteredArr={filteredArr}
+        handleInput={handleInput}
+        searchTerm={searchTerm}
+        filteredBySearch={filteredBySearch}
+      />
     </div>
   );
 }

@@ -3,6 +3,7 @@ import CharacterCards from "./components/CharacterCards/CharacterCards";
 import CharacterTile from "./components/CharacterTile/CharacterTile";
 import characters from "./data/characters";
 import Nav from "./components/Nav/Nav";
+import SearchBox from "./components/SearchBox/SearchBox";
 
 function App() {
   const filteredArr = characters
@@ -16,6 +17,7 @@ function App() {
         <h2>Main Characters</h2>
         <CharacterCards filteredArr={filteredArr} />
       </section>
+      <SearchBox />
       <div className="character-tiles">
         {characters.map((character, index) => (
           <CharacterTile

@@ -1,20 +1,26 @@
 import "./App.scss";
-import Button from "./components/Button/Button";
-import CharacterCard from "./components/CharacterCard/CharacterCard";
+import CharacterCards from "./components/CharacterCards/CharacterCards";
+import CharacterTile from "./components/CharacterTile/CharacterTile";
 import characters from "./data/characters";
+import Nav from "./components/Nav/Nav";
 
 function App() {
-  const filteredArr = characters.filter((character) => character.image);
+  const filteredArr = characters
+    .filter((character) => character.image)
+    .slice(0, 5);
   console.log(filteredArr);
   return (
     <div className="App">
-      <h1>Harry Potter App</h1>
-      <div className="character-cards">
-        {filteredArr.map((character, index) => (
-          <CharacterCard
+      <Nav />
+      <section className="character-gallery">
+        <h2>Main Characters</h2>
+        <CharacterCards filteredArr={filteredArr} />
+      </section>
+      <div className="character-tiles">
+        {characters.map((character, index) => (
+          <CharacterTile
             key={index}
             characterName={character.name}
-            characterImg={character.image}
             house={character.house}
             ancestry={character.ancestry}
             patronus={character.patronus}

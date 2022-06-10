@@ -1,0 +1,9 @@
+@use "../../assets/sass/_variables.scss" as *;
+
+.character-cards {
+    width: 100%;
+  flex: 1;
+  display: flex;
+  overflow-x: auto;
+  overflow: hidden;
+}

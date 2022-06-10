@@ -1,0 +1,11 @@
+@use "../../assets/sass/_variables.scss" as *;
+
+.character-tile {
+    border: 1px solid $color-primary;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 250px;
+    height: auto;
+}

@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/harry-potter-app/static/css/main.e264cf54.css",
-    "main.js": "/harry-potter-app/static/js/main.823a2630.js",
+    "main.css": "/harry-potter-app/static/css/main.e628b7dc.css",
+    "main.js": "/harry-potter-app/static/js/main.f62fa6b5.js",
     "static/js/787.084f4893.chunk.js": "/harry-potter-app/static/js/787.084f4893.chunk.js",
     "index.html": "/harry-potter-app/index.html",
-    "main.e264cf54.css.map": "/harry-potter-app/static/css/main.e264cf54.css.map",
-    "main.823a2630.js.map": "/harry-potter-app/static/js/main.823a2630.js.map",
+    "main.e628b7dc.css.map": "/harry-potter-app/static/css/main.e628b7dc.css.map",
+    "main.f62fa6b5.js.map": "/harry-potter-app/static/js/main.f62fa6b5.js.map",
     "787.084f4893.chunk.js.map": "/harry-potter-app/static/js/787.084f4893.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e264cf54.css",
-    "static/js/main.823a2630.js"
+    "static/css/main.e628b7dc.css",
+    "static/js/main.f62fa6b5.js"
   ]
 }

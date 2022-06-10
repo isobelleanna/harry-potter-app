@@ -21,3 +21,17 @@ body {
     align-items: center;
     justify-content: space-around;
 }
+
+@media screen and (min-width: 992px) {
+  .app {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width:680px) {
+  .character-gallery  {
+    max-width: 880px;
+    margin: 0 auto;
+  }
+}

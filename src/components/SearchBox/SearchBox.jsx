@@ -14,6 +14,7 @@ const SearchBox = (props) => {
         className="search-box__input"
         value={searchTerm}
         onInput={handleInput}
+        placeholder="Search house or name"
       />
     </form>
   );

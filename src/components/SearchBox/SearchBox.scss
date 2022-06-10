@@ -2,13 +2,15 @@
 
 .search-box {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
   margin: 2em;
 
   &__label {
     color: $color-headline;
     font-size: 2em;
     font-family: $font-primary;
+    padding-right: 1vw;
   }
 
   &__input {
